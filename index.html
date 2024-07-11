@@ -3,66 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud's Contact Information</title>
+    <title>Mahmoud's Page</title>
     <style>
         body {
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+            color: #333;
             text-align: center;
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #333;
+        .header {
+            background-image: url('https://images.app.goo.gl/JJDrHCtQiMwtZDQu5');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+        }
+        .content {
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
-        .profile-img {
-            width: 200px;
-            height: 200px;
+        .content img {
+            width: 150px;
             border-radius: 50%;
-            margin-top: 20px;
-        }
-        h1 {
-            color: #ff4500;
-            font-size: 48px;
             margin-bottom: 20px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        li {
-            margin: 15px 0;
-            font-size: 28px;
-        }
-        a {
+        .content a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #0066cc;
             text-decoration: none;
-            color: #1e90ff;
-            font-weight: bold;
+        }
+        .content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Mahmoud</h1>
-        <img src="https://photos.app.goo.gl/JJDrHCtQiMwtZDQu5" alt="Mahmoud's Photo" class="profile-img">
-        <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=100065422909184" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com/Mahmoud95130281" target="_blank">Twitter</a></li>
-            <li><a href="https://www.tiktok.com/@beamustache?_t=8nudLoRzEMp&_r=1" target="_blank">TikTok</a></li>
-            <li><a href="https://wa.me/+201018696720" target="_blank">WhatsApp 1: 01018696720</a></li>
-            <li><a href="https://wa.me/+201018434884" target="_blank">WhatsApp 2: 01018434884</a></li>
-        </ul>
+    </div>
+    <div class="content">
+        <img src="https://images.app.goo.gl/5krS3kg6yjk4Kcm49" alt="Mahmoud's Photo">
+        <a href="https://www.facebook.com/profile.php?id=100065422909184">Facebook</a>
+        <a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2">Instagram</a>
+        <a href="https://twitter.com/Mahmoud95130281">Twitter</a>
+        <a href="https://www.tiktok.com/@beamustache?_t=8nudLoRzEMp&_r=1">TikTok</a>
+        <a href="https://wa.me/+201018696720">WhatsApp 1: 01018696720</a>
+        <a href="https://wa.me/+201018434884">WhatsApp 2: 01018434884</a>
+    </div>
+    <div class="footer">
+        &copy; 2024 Mahmoud. All rights reserved.
     </div>
 </body>
 </html>
