@@ -89,17 +89,11 @@
         }
         .background-text {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: rgba(255, 255, 255, 0.1); /* تغيير درجة اللون وتقليل حجم النص */
-            font-size: 1.8em; /* تصغير حجم النص */
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.4); /* تغيير درجة اللون */
+            font-size: 2em; /* تصغير حجم النص */
         }
         .background-text span {
             margin: 5px;
