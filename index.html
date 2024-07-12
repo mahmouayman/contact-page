@@ -12,6 +12,26 @@
             text-align: center;
             padding: 0;
             margin: 0;
+            position: relative;
+        }
+        .watermark {
+            position: absolute;
+            font-size: 4em;
+            color: rgba(255, 215, 0, 0.1); /* لون ذهبي شفاف */
+            transform: rotate(-45deg);
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .watermark span {
+            margin: 20px;
         }
         .header {
             padding: 50px 0;
@@ -23,8 +43,8 @@
         }
         .content {
             padding: 20px;
-            position: relative; /* تمكين استخدام النصوص التي تحتوي عليها */
-            min-height: calc(100vh - 150px); /* تحديد حجم الصفحة */
+            min-height: calc(100vh - 200px); /* زيادة ارتفاع الصفحة */
+            position: relative;
         }
         .content img {
             width: 150px;
@@ -50,29 +70,20 @@
             color: #fff;
             padding: 20px;
             font-size: 0.9em;
-            position: absolute; /* تمكين استخدام النصوص التي تحتوي عليها */
+            position: relative;
             bottom: 0;
             width: 100%;
-            left: 0;
         }
         .footer img {
             display: block;
             margin: 0 auto 10px;
         }
-        /* أسلوب لوضع اسم "محمود" بشكل مصغر */
-        .watermark {
-            position: absolute;
-            font-size: 0.7em;
-            color: rgba(255, 255, 255, 0.3); /* لون أبيض شفاف */
-            right: 10px;
-            bottom: 10px;
-        }
-        /* أسلوب لتحديد أسماء الشبكات الاجتماعية */
         .social-links {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         .social-links a {
             display: inline-block;
@@ -86,7 +97,6 @@
         .social-links a:hover {
             background-color: #004499; /* تغيير لون الخلفية عند التحويم */
         }
-        /* تحسين التنسيق عند عرض الصفحة على أجهزة مختلفة */
         @media (max-width: 768px) {
             .social-links {
                 flex-direction: column;
@@ -96,7 +106,15 @@
     </style>
 </head>
 <body>
+    <div class="watermark">
+        <span>Mahmoud</span>
+        <span>Mahmoud</span>
+        <span>Mahmoud</span>
+        <span>Mahmoud</span>
+        <span>Mahmoud</span>
+    </div>
     <div class="header">
+        <img src="new_real_madrid_logo.png" alt="Real Madrid Logo" width="100">
         <h1>Mahmoud</h1>
     </div>
     <div class="content">
@@ -109,10 +127,9 @@
             <a href="https://wa.me/+201018434884">WhatsApp 2: 01018434884</a>
             <a href="https://t.me/m_a_c_r_c_r_7">Telegram: @m_a_c_r_c_r_7</a>
         </div>
-        <div class="watermark">محمود</div> <!-- إضافة العلامة المائية -->
     </div>
     <div class="footer">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo" width="100">
+        <img src="new_real_madrid_logo.png" alt="Real Madrid Logo" width="100">
         &copy; 2024 Mahmoud. All rights reserved.
     </div>
 </body>
