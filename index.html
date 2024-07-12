@@ -6,43 +6,37 @@
     <title>Mahmoud's Page</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #000; /* خلفية سوداء */
             font-family: Arial, sans-serif;
             color: #fff;
             text-align: center;
             padding: 0;
             margin: 0;
-            position: relative;
-            background-image: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.2) 0, rgba(255, 215, 0, 0.2) 1px, transparent 1px, transparent 20%);
-            background-size: 50px 50px;
+            background-image: url('data:image/png;base64,<<Base64 String for Mahmoud Pattern>>'); /* Replace with actual base64 string */
+            background-size: cover;
         }
         .header {
-            padding: 30px 0;
-        }
-        .header img {
-            width: 100px; /* حجم صورة الشعار في العنوان */
-            margin-bottom: 10px;
+            padding: 50px 0;
         }
         .header h1 {
             font-size: 3em;
             margin: 0;
-            color: #0066cc;
+            color: #0066cc; /* لون أزرق للعنوان */
         }
         .content {
             padding: 20px;
-            min-height: calc(100vh - 180px);
-            position: relative;
+            position: relative; /* تمكين استخدام النصوص التي تحتوي عليها */
+            min-height: calc(100vh - 150px); /* تحديد حجم الصفحة */
         }
-        .content img {
-            width: 150px;
-            border-radius: 50%;
+        .main-image {
+            width: 300px;
             margin-bottom: 20px;
         }
         .content a {
             display: block;
             margin: 10px 0;
             font-size: 1.2em;
-            color: #0066cc;
+            color: #0066cc; /* لون أزرق للروابط */
             text-decoration: none;
         }
         .content a:hover {
@@ -56,22 +50,36 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            left: 0;
         }
         .footer img {
             display: block;
             margin: 0 auto 10px;
-            width: 100px; /* حجم صورة الشعار في الفوتر */
         }
+        /* أسلوب لوضع اسم "محمود" بشكل مصغر */
+        .watermark {
+            position: absolute;
+            font-size: 3em; /* تكبير حجم الخط */
+            color: rgba(255, 215, 0, 0.3); /* لون ذهبي شفاف */
+            white-space: nowrap;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        /* أسلوب لتحديد أسماء الشبكات الاجتماعية */
         .social-links {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
         .social-links a {
             display: inline-block;
-            background-color: #0066cc;
+            background-color: #0066cc; /* لون خلفية للرموز */
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -79,8 +87,9 @@
             transition: background-color 0.3s ease;
         }
         .social-links a:hover {
-            background-color: #004499;
+            background-color: #004499; /* تغيير لون الخلفية عند التحويم */
         }
+        /* تحسين التنسيق عند عرض الصفحة على أجهزة مختلفة */
         @media (max-width: 768px) {
             .social-links {
                 flex-direction: column;
@@ -91,26 +100,19 @@
 </head>
 <body>
     <div class="header">
-        <!-- صورة الشعار في العنوان -->
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
+        <img src="data:image/png;base64,<<Base64 String for Real Madrid Logo>>" alt="Real Madrid Logo" class="main-image"> <!-- Replace with actual base64 string -->
         <h1>Mahmoud</h1>
     </div>
     <div class="content">
-        <div class="social-links">
-            <!-- الروابط الاجتماعية -->
-            <a href="https://www.facebook.com/profile.php?id=100065422909184">Facebook</a>
-            <a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2">Instagram</a>
-            <a href="https://twitter.com/Mahmoud95130281">Twitter</a>
-            <a href="https://www.tiktok.com/@beamustache?_t=8nudLoRzEMp&_r=1">TikTok</a>
-            <a href="https://wa.me/+201018696720">WhatsApp 1: 01018696720</a>
-            <a href="https://wa.me/+201018434884">WhatsApp 2: 01018434884</a>
-            <a href="https://t.me/m_a_c_r_c_r_7">Telegram: @m_a_c_r_c_r_7</a>
+        <div class="content-wrapper">
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100065422909184">Facebook</a>
+                <a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2">Instagram</a>
+                <a href="https://twitter.com/Mahmoud95130281">Twitter</a>
+                <a href="https://www.tiktok.com/@beamustache?_t=8nudLoRzEMp&_r=1">TikTok</a>
+                <a href="https://wa.me/+201018696720">WhatsApp 1: 01018696720</a>
+                <a href="https://wa.me/+201018434884">WhatsApp 2: 01018434884</a>
+                <a href="https://t.me/m_a_c_r_c_r_7">Telegram: @m_a_c_r_c_r_7</a>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <!-- صورة الشعار في الفوتر -->
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
-        &copy; 2024 Mahmoud. All rights reserved.
-    </div>
-</body>
-</html>
+        <div class="watermark">Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahmoud Mahm
