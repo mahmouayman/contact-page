@@ -15,14 +15,16 @@
             padding: 0;
             margin: 0;
             position: relative;
-            background-image: repeating-linear-gradient(45deg, #FFD700 0, #FFD700 1px, transparent 1px, transparent 20%);
-            background-size: 50px 50px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .header {
+        .header, .footer {
             padding: 30px 0;
         }
-        .header img {
-            width: 100px; /* حجم صورة الشعار في العنوان */
+        .header img, .footer img {
+            width: 100px; /* حجم صورة الشعار */
             margin-bottom: 10px;
         }
         .header h1 {
@@ -32,12 +34,7 @@
         }
         .content {
             padding: 20px;
-            min-height: calc(100vh - 180px);
-        }
-        .content img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+            flex: 1;
         }
         .content a {
             display: block;
@@ -48,20 +45,6 @@
         }
         .content a:hover {
             text-decoration: underline;
-        }
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            font-size: 0.9em;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .footer img {
-            display: block;
-            margin: 0 auto 10px;
-            width: 100px; /* حجم صورة الشعار في الفوتر */
         }
         .social-links {
             display: flex;
@@ -81,12 +64,6 @@
         }
         .social-links a:hover {
             background-color: #004499;
-        }
-        @media (max-width: 768px) {
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
         }
         .background-text {
             position: absolute;
@@ -128,22 +105,12 @@
         &copy; 2024 Mahmoud. All rights reserved.
     </div>
     <div class="background-text">
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
-        <span>Mahmoud</span>
+        <!-- استبدال الخطوط بكتابة "Mahmoud" -->
+        <span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span>
+        <span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span>
+        <span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span>
+        <span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span>
+        <span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span><span>Mahmoud</span>
     </div>
 </body>
 </html>
