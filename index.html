@@ -1,4 +1,84 @@
-<img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud CR7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cristiano_Ronaldo_2018.jpg/1024px-Cristiano_Ronaldo_2018.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 50px;
+            height: 50px;
+        }
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .contact-form button:hover {
+            background-color: #e6c200;
+        }
+        .footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+        .footer p {
+            margin: 0;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
         <h1>Mahmoud CR7</h1>
     </div>
 
@@ -28,6 +108,7 @@
             <h2>Contact Me</h2>
             <form action="your-backend-endpoint" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
