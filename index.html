@@ -5,96 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahmoud's Page</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
         body {
-            background-color: #000;
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             color: #fff;
             text-align: center;
             padding: 0;
             margin: 0;
             position: relative;
-            background-image: linear-gradient(135deg, #000000 25%, #333333 25%, #333333 50%, #000000 50%, #000000 75%, #333333 75%, #333333 100%);
-            background-size: 20px 20px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
         }
-        
         .header {
             padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.7);
         }
-        
         .header img {
-            width: 80px;
+            width: 100px;
             margin-bottom: 10px;
         }
-        
         .header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
             color: #FFD700;
         }
-        
         .content {
             padding: 20px;
             min-height: calc(100vh - 180px);
+            background-color: rgba(0, 0, 0, 0.7);
         }
-        
-        .content a {
-            display: inline-block;
-            margin: 10px 0;
-            font-size: 1.1em;
-            color: #0066cc;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #0066cc;
-            color: #fff;
-            border-radius: 25px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .content a:hover {
-            background-color: #004499;
-            transform: scale(1.05);
-        }
-        
-        .footer {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            font-size: 0.9em;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        
-        .footer img {
-            display: block;
-            margin: 0 auto 10px;
-            width: 80px;
-        }
-        
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
-        
+        .social-links a {
+            display: inline-block;
+            background-color: #0066cc;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .social-links a:hover {
+            background-color: #004499;
+        }
         @media (max-width: 768px) {
             .social-links {
                 flex-direction: column;
                 align-items: center;
             }
         }
-        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 0.9em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .footer img {
+            display: block;
+            margin: 0 auto 10px;
+            width: 100px;
+        }
         .signature {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
             color: #FFD700;
             font-size: 1.2em;
+        }
+        .contact-form {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #FFD700;
+            color: #000;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #FFC107;
         }
     </style>
 </head>
@@ -113,8 +119,19 @@
             <a href="https://wa.me/+201018434884">WhatsApp 2: For Work</a>
             <a href="https://t.me/m_a_c_r_c_r_7">Telegram 1: Private (@m_a_c_r_c_r_7)</a>
             <a href="https://t.me/M_P_M_F">Telegram 2: For Work (@M_P_M_F)</a>
+            <span class="signature">With Regards, <span style="color: #FFD700;">Mahmoud CR7</span></span>
         </div>
-        <span class="signature">With Regards, <span style="color: #FFD700; font-size: 1.2em;">Mahmoud CR7</span></span>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
     <div class="footer">
         <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
