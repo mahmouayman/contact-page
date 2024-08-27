@@ -33,6 +33,11 @@
             min-height: calc(100vh - 180px);
             position: relative;
         }
+        .content img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
         .content a {
             display: block;
             margin: 10px 0;
@@ -66,7 +71,7 @@
         }
         .social-links a {
             display: inline-block;
-            background: linear-gradient(45deg, #0000FF, #8A2BE2); /* مزيج من اللون الأزرق والبنفسجي */
+            background-color: #0066cc;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -74,7 +79,7 @@
             transition: background-color 0.3s ease;
         }
         .social-links a:hover {
-            background: linear-gradient(45deg, #8A2BE2, #0000FF); /* انعكاس المزيج عند التمرير */
+            background-color: #004499;
         }
         @media (max-width: 768px) {
             .social-links {
@@ -91,10 +96,63 @@
             font-size: 1.2em; /* تكبير حجم النص */
         }
     </style>
+
+    <!-- Firebase and Tracking Code -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // تسجيل زيارة جديدة
+        function trackVisit() {
+            const visitData = {
+                userAgent: navigator.userAgent,
+                timestamp: new Date().toISOString()
+            };
+            database.ref('visits').push(visitData);
+            sendNotification(visitData);
+        }
+
+        // إرسال إشعار باستخدام Pushbullet
+        function sendNotification(visitData) {
+            fetch('https://api.pushbullet.com/v2/pushes', {
+                method: 'POST',
+                headers: {
+                    'Access-Token': 'YOUR_PUSHBULLET_ACCESS_TOKEN',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    type: 'note',
+                    title: 'New Visitor on Mahmoud\'s Page',
+                    body: `User-Agent: ${visitData.userAgent}\nTime: ${visitData.timestamp}`
+                })
+            });
+        }
+
+        // التحقق إذا الزائر زار الموقع من قبل
+        if (localStorage.getItem('visited') === null) {
+            localStorage.setItem('visited', 'true');
+            trackVisit();
+        }
+    </script>
+
 </head>
 <body>
     <div class="header">
-        <!-- شعار ريال مدريد في العنوان -->
+        <!-- صورة الشعار في العنوان -->
         <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
         <h1>Mahmoud</h1>
     </div>
@@ -108,14 +166,4 @@
             <a href="https://wa.me/+201018696720">WhatsApp 1: Private</a>
             <a href="https://wa.me/+201018434884">WhatsApp 2: For Work</a>
             <a href="https://t.me/m_a_c_r_c_r_7">Telegram 1: Private (@m_a_c_r_c_r_7)</a>
-            <a href="https://t.me/M_P_M_F">Telegram 2: For Work (@M_P_M_F)</a> <!-- حساب Telegram الجديد للعمل -->
-            <span class="signature">With Regards, <span style="color: #FFD700; font-size: 1.2em;">Mahmoud CR7</span></span>
-        </div>
-    </div>
-    <div class="footer">
-        <!-- شعار ريال مدريد في الفوتر -->
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
-        &copy; 2024 Mahmoud. All rights reserved.
-    </div>
-</body>
-</html>
+            <a href="https://t.me/M_P_M_F">Telegram 2: For Work (@M_P_M_F)</
