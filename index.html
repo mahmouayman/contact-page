@@ -5,51 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahmoud's Page</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
         body {
             background-color: #000;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #fff;
             text-align: center;
             padding: 0;
             margin: 0;
             position: relative;
-            background-image: repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.5) 0, rgba(255, 215, 0, 0.5) 1px, transparent 1px, transparent 20%);
-            background-size: 50px 50px;
+            background-image: linear-gradient(135deg, #000000 25%, #333333 25%, #333333 50%, #000000 50%, #000000 75%, #333333 75%, #333333 100%);
+            background-size: 20px 20px;
         }
+        
         .header {
             padding: 30px 0;
         }
+        
         .header img {
-            width: 100px; /* حجم صورة الشعار في العنوان */
+            width: 80px;
             margin-bottom: 10px;
         }
+        
         .header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
-            color: #FFD700; /* لون النص الذهبي */
+            color: #FFD700;
         }
+        
         .content {
             padding: 20px;
             min-height: calc(100vh - 180px);
-            position: relative;
         }
-        .content img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+        
         .content a {
-            display: block;
+            display: inline-block;
             margin: 10px 0;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #0066cc;
             text-decoration: none;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: #fff;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+        
         .content a:hover {
-            text-decoration: underline;
+            background-color: #004499;
+            transform: scale(1.05);
         }
+        
         .footer {
-            background-color: #333;
+            background-color: #222;
             color: #fff;
             padding: 20px;
             font-size: 0.9em;
@@ -57,108 +66,45 @@
             bottom: 0;
             width: 100%;
         }
+        
         .footer img {
             display: block;
             margin: 0 auto 10px;
-            width: 100px; /* حجم صورة الشعار في الفوتر */
+            width: 80px;
         }
+        
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
-        .social-links a {
-            display: inline-block;
-            background-color: #0066cc;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .social-links a:hover {
-            background-color: #004499;
-        }
+        
         @media (max-width: 768px) {
             .social-links {
                 flex-direction: column;
                 align-items: center;
             }
         }
+        
         .signature {
             position: absolute;
             bottom: 30px;
             left: 0;
             right: 0;
-            color: #FFD700; /* لون النص الذهبي */
-            font-size: 1.2em; /* تكبير حجم النص */
+            color: #FFD700;
+            font-size: 1.2em;
         }
     </style>
-
-    <!-- Firebase and Tracking Code -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
-    <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-
-        // تسجيل زيارة جديدة
-        function trackVisit() {
-            const visitData = {
-                userAgent: navigator.userAgent,
-                timestamp: new Date().toISOString()
-            };
-            database.ref('visits').push(visitData);
-            sendNotification(visitData);
-        }
-
-        // إرسال إشعار باستخدام Pushbullet
-        function sendNotification(visitData) {
-            fetch('https://api.pushbullet.com/v2/pushes', {
-                method: 'POST',
-                headers: {
-                    'Access-Token': 'YOUR_PUSHBULLET_ACCESS_TOKEN',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    type: 'note',
-                    title: 'New Visitor on Mahmoud\'s Page',
-                    body: `User-Agent: ${visitData.userAgent}\nTime: ${visitData.timestamp}`
-                })
-            });
-        }
-
-        // التحقق إذا الزائر زار الموقع من قبل
-        if (localStorage.getItem('visited') === null) {
-            localStorage.setItem('visited', 'true');
-            trackVisit();
-        }
-    </script>
-
 </head>
 <body>
     <div class="header">
-        <!-- صورة الشعار في العنوان -->
         <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
         <h1>Mahmoud</h1>
     </div>
     <div class="content">
         <div class="social-links">
-            <!-- الروابط الاجتماعية -->
             <a href="https://www.facebook.com/profile.php?id=100065422909184">Facebook</a>
             <a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2">Instagram</a>
             <a href="https://twitter.com/Mahmoud95130281">Twitter</a>
@@ -166,4 +112,13 @@
             <a href="https://wa.me/+201018696720">WhatsApp 1: Private</a>
             <a href="https://wa.me/+201018434884">WhatsApp 2: For Work</a>
             <a href="https://t.me/m_a_c_r_c_r_7">Telegram 1: Private (@m_a_c_r_c_r_7)</a>
-            <a href="https://t.me/M_P_M_F">Telegram 2: For Work (@M_P_M_F)</
+            <a href="https://t.me/M_P_M_F">Telegram 2: For Work (@M_P_M_F)</a>
+        </div>
+        <span class="signature">With Regards, <span style="color: #FFD700; font-size: 1.2em;">Mahmoud CR7</span></span>
+    </div>
+    <div class="footer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
+        &copy; 2024 Mahmoud. All rights reserved.
+    </div>
+</body>
+</html>
