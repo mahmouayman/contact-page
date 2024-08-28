@@ -3,130 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Mahmoud's Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
             color: #fff;
             text-align: center;
-            margin: 0;
             padding: 0;
+            margin: 0;
+            position: relative;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
         }
-        h1 {
-            margin: 20px 0;
+        .header {
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
             color: #FFD700;
         }
-        form {
-            margin: 20px auto;
-            max-width: 400px;
+        .content {
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
+            min-height: calc(100vh - 180px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+        .social-links img {
+            width: 50px;
+            height: 50px;
             border-radius: 10px;
         }
-        input, textarea {
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 0.9em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .footer img {
+            display: block;
+            margin: 0 auto 10px;
+            width: 100px;
+        }
+        .signature {
+            color: #FFD700;
+            font-size: 1.2em;
+        }
+        .contact-form {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
-            border: 1px solid #FFD700;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #FFD700;
             border: none;
-            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #FFD700;
             color: #000;
-            font-size: 16px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #ffcc00;
-        }
-        .icons {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .icons a {
-            margin: 0 10px;
-        }
-        .icons img {
-            width: 50px;
-            height: 50px;
-        }
-        .icons span {
-            display: block;
-            margin-top: 5px;
-            font-size: 12px;
-            color: #FFD700;
-        }
-        .message {
-            color: #FFD700;
-            margin: 20px 0;
+        .contact-form button:hover {
+            background-color: #FFC107;
         }
     </style>
 </head>
 <body>
-
-    <h1>Mahmoud</h1>
-
-    <div class="icons">
-        <div>
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
+        <h1>Mahmoud</h1>
+    </div>
+    <div class="content">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100065422909184">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/mahmoud_ayman____ca7?igsh=bm51Y2JvamNsMnV2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/Mahmoud95130281">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+            </a>
+            <a href="https://www.tiktok.com/@beamustache?_t=8nudLoRzEMp&_r=1">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+            </a>
+            <a href="https://wa.me/+201018696720">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 1">
+            </a>
+            <a href="https://wa.me/+201018434884">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 2">
+            </a>
+            <a href="https://t.me/m_a_c_r_c_r_7">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram 1">
+            </a>
+            <a href="https://t.me/M_P_M_F">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram 2">
+            </a>
         </div>
-        <div>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-        </div>
-        <div>
-            <a href="#"><img src="twitter.png" alt="Twitter"></a>
-        </div>
-        <div>
-            <a href="#"><img src="tiktok.png" alt="TikTok"></a>
-        </div>
-        <div>
-            <a href="whatsapp://send?phone=YOUR_NUMBER&text=Hello"><img src="whatsapp.png" alt="WhatsApp"></a>
-            <span>Private</span>
-        </div>
-        <div>
-            <a href="whatsapp://send?phone=YOUR_WORK_NUMBER&text=Hello"><img src="whatsapp.png" alt="WhatsApp"></a>
-            <span>For Work</span>
-        </div>
-        <div>
-            <a href="tg://resolve?domain=YOUR_PRIVATE_TELEGRAM"><img src="telegram.png" alt="Telegram"></a>
-            <span>Private</span>
-        </div>
-        <div>
-            <a href="tg://resolve?domain=YOUR_WORK_TELEGRAM"><img src="telegram.png" alt="Telegram"></a>
-            <span>For Work</span>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="mailto:mahmoudayman1752007a@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
-
-    <form action="" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" name="submit">Send Message</button>
-    </form>
-
-    <?php
-    if (isset($_POST['submit'])) {
-        $to = "mahmoudayman1752007a@gmail.com"; // البريد الإلكتروني الذي تريد استقبال الرسائل عليه
-        $subject = "New Contact Form Message";
-        $message = "Name: " . $_POST['name'] . "\n";
-        $message .= "Email: " . $_POST['email'] . "\n";
-        $message .= "Message: " . $_POST['message'];
-        $headers = "From: " . $_POST['email'];
-
-        if (mail($to, $subject, $message, $headers)) {
-            echo "<p class='message'>Message sent successfully!</p>";
-        } else {
-            echo "<p class='message'>Failed to send message. Please try again.</p>";
-        }
-    }
-    ?>
-
+    <div class="footer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo">
+        &copy; 2024 Mahmoud. All rights reserved.
+    </div>
 </body>
 </html>
